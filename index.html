@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elvin Peters — AI Strategist & Builder</title>
+<meta name="description" content="Elvin Peters is a Toronto-based AI strategist, author, and builder. Former Google Ads strategist. Author of The Artificial Advantage.">
+<meta property="og:title" content="Elvin Peters — AI Strategist & Builder">
+<meta property="og:description" content="Former Google Ads. Author of The Artificial Advantage. Building AI-powered businesses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elvinpeters.com">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d0d1f;
+    --gold: #c9a84c;
+    --gold-dim: #c9a84c44;
+    --white: #ffffff;
+    --off-white: #f4f2ee;
+    --muted: #888;
+    --text: #1a1a1a;
+    --card-bg: #fff;
+    --border: #e8e4db;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13, 13, 31, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 140px 24px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 span { color: var(--gold); }
+
+  .hero .tagline {
+    font-size: 18px;
+    color: #999;
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.55;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.85; }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 13px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
+
+  /* ── CREDIBILITY BAR ── */
+  .cred-bar {
+    background: #f9f7f3;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .cred-bar-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .cred-item {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cred-item .icon { font-size: 16px; }
+
+  .cred-item strong { color: var(--text); }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 80px 24px;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-sub {
+    font-size: 17px;
+    color: #555;
+    max-width: 560px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  @media (max-width: 700px) {
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .nav-links { display: none; }
+  }
+
+  .about-text p {
+    margin-bottom: 16px;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .stat-card {
+    background: var(--off-white);
+    border-radius: 10px;
+    padding: 22px;
+    border: 1px solid var(--border);
+  }
+
+  .stat-card .stat-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -1px;
+  }
+
+  .stat-card .stat-num span { color: var(--gold); }
+
+  .stat-card .stat-label {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+  }
+
+  /* ── BOOK ── */
+  .book-section {
+    background: var(--navy);
+  }
+
+  .book-section .section-title { color: var(--white); }
+  .book-section .section-sub { color: #aaa; }
+  .book-section .section-label { color: var(--gold); }
+
+  .book-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 14px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 820px;
+  }
+
+  @media (max-width: 600px) {
+    .book-card { grid-template-columns: 1fr; }
+  }
+
+  .book-cover-placeholder {
+    width: 140px;
+    height: 190px;
+    background: linear-gradient(135deg, #1a1a35 0%, #0d0d1f 100%);
+    border: 1px solid var(--gold-dim);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+    flex-shrink: 0;
+  }
+
+  .book-cover-placeholder .book-title-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .book-cover-placeholder .book-vol {
+    font-size: 9px;
+    color: #666;
+    margin-top: 8px;
+  }
+
+  .book-info h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .book-info .book-meta {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .book-info p {
+    font-size: 15px;
+    color: #aaa;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .book-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .book-link {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .book-link:hover { opacity: 0.85; }
+
+  .book-link.outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* ── WORK / PROJECTS ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .project-card:hover {
+    border-color: #c9a84c66;
+    transform: translateY(-2px);
+  }
+
+  .project-card .project-icon {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .project-tag {
+    display: inline-block;
+    background: #f0ebe0;
+    color: #8a6d2f;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-section {
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .newsletter-box {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .newsletter-box .section-title { margin-bottom: 12px; }
+
+  .newsletter-box p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+  }
+
+  .newsletter-form input:focus { border-color: var(--gold); }
+
+  .newsletter-form button {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+
+  .newsletter-form button:hover { opacity: 0.85; }
+
+  .newsletter-note {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 12px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .footer-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .footer-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-note {
+    font-size: 12px;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Elvin <span>Peters</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">Toronto · AI Strategist · Builder</div>
+  <h1>The <span>Artificial</span><br>Advantage</h1>
+  <p class="tagline">I build AI-powered businesses and teach professionals how to use AI to work smarter, earn more, and do what used to require a full team.</p>
+  <div class="hero-ctas">
+    <a href="https://goodadagency.gumroad.com/l/pvofzn" class="btn-primary" target="_blank" rel="noopener">Get the Book</a>
+    <a href="#newsletter" class="btn-secondary">Weekly Newsletter</a>
+  </div>
+</section>
+
+<!-- CREDIBILITY BAR -->
+<div class="cred-bar">
+  <div class="cred-bar-inner">
+    <div class="cred-item">
+      <span class="icon">📖</span>
+      <span>Author of <strong>The Artificial Advantage</strong></span>
+    </div>
+    <div class="cred-item">
+      <span class="icon">🏢</span>
+      <span>Former <strong>Google Ads</strong> Strategist</span>
+    </div>
+    <div class="cred-item">
+      <span class="icon">💳</span>
+      <span><strong>3 years</strong> Paid Media at goeasy (TSX: GSY)</span>
+    </div>
+    <div class="cred-item">
+      <span class="icon">🤖</span>
+      <span>Building <strong>AI-automated</strong> businesses</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">About</p>
+        <h2 class="section-title">I help professionals stop drowning in work and start leveraging AI like a team of one.</h2>
+        <p>I spent years running paid media for some of Canada's biggest brands — first as a Google Ads strategist, then managing millions in ad spend at goeasy, one of Canada's largest consumer finance companies.</p>
+        <p>When I went self-employed, I had a simple problem: I needed to do the work of a full team, alone. AI solved that. Not perfectly, not without learning — but decisively.</p>
+        <p>Now I build AI-automated businesses and document everything: the tools, the workflows, the prompts, and the systems that actually work. That became a book. Then a newsletter. Then this.</p>
+        <p>Based in Toronto. Moving fast.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">15<span>+</span></div>
+          <div class="stat-label">AI-built websites launched in one week</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7K<span>+</span></div>
+          <div class="stat-label">Business listings indexed across Ontario</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3<span>yrs</span></div>
+          <div class="stat-label">Paid media at a Canadian fintech (TSX-listed)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">Vol<span>.1</span></div>
+          <div class="stat-label">The Artificial Advantage — the AI Fluency Series</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="book-section">
+  <div class="section-inner">
+    <p class="section-label">The Book</p>
+    <h2 class="section-title">The Artificial Advantage</h2>
+    <p class="section-sub">A practical guide to using AI at work — not to replace your job, but to make you irreplaceable.</p>
+    <div class="book-card">
+      <div class="book-cover-placeholder">
+        <div class="book-title-text">The Artificial<br>Advantage</div>
+        <div class="book-vol">AI Fluency Series — Vol. 1</div>
+      </div>
+      <div class="book-info">
+        <h3>The Artificial Advantage</h3>
+        <div class="book-meta">AI FLUENCY SERIES · VOL. 1 · BY ELVIN PETERS</div>
+        <p>Most professionals are using AI like a search engine. This book shows you how to use it like a partner. Covers prompting, automation, the right tools for the right jobs, and how to build AI into every part of your work — from emails to strategy.</p>
+        <p>Practical, direct, no fluff. Built for people with jobs to do, not researchers with time to theorize.</p>
+        <div class="book-links">
+          <a href="https://goodadagency.gumroad.com/l/pvofzn" class="book-link" target="_blank" rel="noopener">Get on Gumroad</a>
+          <a href="https://www.amazon.com" class="book-link outline" target="_blank" rel="noopener">Amazon KDP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="section-inner">
+    <p class="section-label">What I Build</p>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">Real businesses, built with AI. Not demos — things that generate traffic, data, and revenue.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🗂️</div>
+        <h3>Ontario Directory Network</h3>
+        <p>15 niche business directories across Ontario — dental, HVAC, legal, roofing, and more. 7,600+ listings scraped, formatted, and deployed in under a week with AI.</p>
+        <span class="project-tag">SEO · Vercel · AI</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🎵</div>
+        <h3>Suno Music Channel</h3>
+        <p>AI-generated 528Hz healing and meditation music compiled into long-form YouTube videos. Fully automated pipeline from generation to upload.</p>
+        <span class="project-tag">YouTube · AI Music · Automation</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">✂️</div>
+        <h3>Video Clipper</h3>
+        <p>Automated pipeline that watches YouTube channels, clips best moments with AI, and uploads as Shorts. Earns via Whop revenue share.</p>
+        <span class="project-tag">YouTube Shorts · Claude · ffmpeg</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🤖</div>
+        <h3>Twitter / X Agent</h3>
+        <p>Autonomous agent posting 8x/day with AI-generated content across 9 tweet formats. Months of content queued, self-replenishing.</p>
+        <span class="project-tag">Twitter API · Python · OAuth</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">📚</div>
+        <h3>AI Role Pack PDFs</h3>
+        <p>Gumroad products for 12 job functions — Marketing, Sales, Finance, HR, and more. Each contains 20+ role-specific AI prompts, tool stacks, and a 30-day implementation plan.</p>
+        <span class="project-tag">Gumroad · Digital Products</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🖥️</div>
+        <h3>VPS Automation Layer</h3>
+        <p>Hetzner VPS running tools, cron agents, and micro-apps. QR generator, analytics stack, and automation infrastructure for everything else.</p>
+        <span class="project-tag">Hetzner · Caddy · Ubuntu</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="newsletter-section">
+  <div class="section-inner">
+    <div class="newsletter-box">
+      <p class="section-label" style="text-align:center">Free Weekly Newsletter</p>
+      <h2 class="section-title">The Artificial Advantage</h2>
+      <p>One short email per week. Real AI workflows, tools, and systems — tested in real businesses. No theory, no hype.</p>
+      <!-- BEEHIIV EMBED GOES HERE — replace this form with Beehiiv embed code -->
+      <div id="beehiiv-placeholder" style="background:#f0ebe0;border-radius:8px;padding:24px;text-align:center;font-size:14px;color:#888;">
+        Newsletter signup coming soon — powered by Beehiiv.
+      </div>
+      <div class="newsletter-note">Free. Unsubscribe any time. No spam.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Elvin Peters</div>
+    <div class="footer-links">
+      <a href="https://goodadagency.gumroad.com/l/pvofzn" target="_blank" rel="noopener">Book</a>
+      <a href="https://twitter.com/elvin_peters" target="_blank" rel="noopener">Twitter / X</a>
+      <a href="https://www.youtube.com/@elvin_peters" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:elvin@epeters.ca">Contact</a>
+    </div>
+    <div class="footer-note">© 2026 Elvin Peters · Toronto, Canada</div>
+  </div>
+</footer>
+
+</body>
+</html>
