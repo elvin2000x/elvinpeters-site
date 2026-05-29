@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Ads Management Pricing — Elvin Peters | Ontario</title>
+<meta name="description" content="Simple, transparent Google Ads management pricing for Ontario businesses. Month-to-month. No long-term contracts. Results-based.">
+<meta name="robots" content="index, follow">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0d0d1f; --gold: #c9a84c; --white: #ffffff;
+    --bg: #f5f4f0; --text: #1a1a1a; --muted: #666;
+    --green: #2a9d5c;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+         background: var(--bg); color: var(--text); line-height: 1.7; }
+
+  nav { background: var(--navy); padding: 16px 24px; display: flex;
+        align-items: center; justify-content: space-between; }
+  .nav-logo { color: var(--white); font-weight: 800; font-size: 17px; text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 20px; list-style: none; }
+  .nav-links a { color: #888; font-size: 14px; text-decoration: none; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links .nav-cta { color: var(--gold); font-weight: 700; }
+
+  .hero { background: var(--navy); color: var(--white); padding: 72px 24px 56px; text-align: center; }
+  .eyebrow { display: inline-block; background: rgba(201,168,76,0.15); color: var(--gold);
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(201,168,76,0.3); margin-bottom: 20px; }
+  .hero h1 { font-size: 38px; font-weight: 900; margin-bottom: 12px; line-height: 1.2; }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub { color: #aaa; font-size: 17px; max-width: 560px; margin: 0 auto; }
+
+  .section { max-width: 1000px; margin: 0 auto; padding: 64px 24px; }
+  h2 { font-size: 28px; font-weight: 900; color: var(--navy); margin-bottom: 8px; }
+  .section-sub { color: var(--muted); font-size: 16px; margin-bottom: 40px; }
+
+  /* FREE OFFER BANNER */
+  .free-banner {
+    background: var(--green); color: var(--white);
+    border-radius: 10px; padding: 32px;
+    text-align: center; margin-bottom: 48px;
+  }
+  .free-banner h3 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+  .free-banner p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 20px; }
+  .btn-white { display: inline-block; background: var(--white); color: var(--green);
+               font-weight: 800; font-size: 15px; padding: 12px 28px; border-radius: 6px;
+               text-decoration: none; }
+
+  /* PRICING GRID */
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+  @media (max-width: 800px) { .pricing-grid { grid-template-columns: 1fr; } }
+  .plan {
+    background: var(--white); border-radius: 10px; padding: 32px 24px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06); position: relative;
+    border: 2px solid transparent;
+  }
+  .plan.featured { border-color: var(--gold); }
+  .plan-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 800;
+    padding: 3px 14px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .plan-name { font-size: 14px; font-weight: 700; color: var(--muted);
+               text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .plan-price { font-size: 42px; font-weight: 900; color: var(--navy); line-height: 1; }
+  .plan-price .per { font-size: 16px; font-weight: 400; color: var(--muted); }
+  .plan-desc { font-size: 14px; color: var(--muted); margin: 12px 0 24px; }
+  .plan-features { list-style: none; margin-bottom: 28px; }
+  .plan-features li { font-size: 14px; color: #444; padding: 8px 0;
+                      border-bottom: 1px solid #f0ede8; display: flex; align-items: flex-start; gap: 8px; }
+  .plan-features li:last-child { border-bottom: none; }
+  .plan-features li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; }
+  .plan-btn { display: block; text-align: center; padding: 13px; border-radius: 6px;
+              font-weight: 700; font-size: 15px; text-decoration: none; }
+  .plan-btn.primary { background: var(--gold); color: var(--navy); }
+  .plan-btn.secondary { background: var(--bg); color: var(--navy); border: 1px solid #ddd; }
+  .plan-btn:hover { opacity: 0.9; }
+
+  /* COMPARISON TABLE */
+  .compare-table { width: 100%; border-collapse: collapse; background: var(--white);
+                   border-radius: 10px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+  .compare-table th { background: var(--navy); color: var(--white); padding: 14px 16px;
+                       font-size: 13px; font-weight: 700; text-align: left; }
+  .compare-table th:not(:first-child) { text-align: center; }
+  .compare-table td { padding: 12px 16px; border-bottom: 1px solid #f0ede8; font-size: 14px; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table td:not(:first-child) { text-align: center; }
+  .check { color: var(--green); font-weight: 700; }
+  .dash { color: #ccc; }
+
+  /* FAQ */
+  .faq-list { display: grid; gap: 16px; }
+  .faq-item { background: var(--white); border-radius: 8px; padding: 20px 24px;
+              box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .faq-q { font-weight: 700; color: var(--navy); margin-bottom: 8px; font-size: 15px; }
+  .faq-a { color: #555; font-size: 15px; }
+
+  /* CTA */
+  .cta-section { background: var(--navy); color: var(--white); text-align: center; padding: 72px 24px; }
+  .cta-section h2 { font-size: 32px; font-weight: 900; margin-bottom: 12px; }
+  .cta-section h2 span { color: var(--gold); }
+  .cta-section p { color: #aaa; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .btn-gold { display: inline-block; background: var(--gold); color: var(--navy);
+              font-weight: 800; font-size: 16px; padding: 16px 40px; border-radius: 6px;
+              text-decoration: none; box-shadow: 0 4px 20px rgba(201,168,76,0.4); }
+
+  footer { background: #0a0a18; color: #444; text-align: center; padding: 28px 24px; font-size: 12px; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Elvin <span>Peters</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#book">Book</a></li>
+    <li><a href="free.html" class="nav-cta">Free Offer →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">Google Ads Management · Ontario</div>
+  <h1>Simple, Transparent<br><span>Pricing</span></h1>
+  <p class="hero-sub">Month-to-month. No long-term contracts. No percentage-of-spend fees. Flat rate, so I'm not incentivized to burn your budget.</p>
+</div>
+
+<div class="section">
+
+  <!-- FREE OFFER BANNER -->
+  <div class="free-banner">
+    <h3>Before you look at paid plans — there's a free option</h3>
+    <p>I'm currently taking on 5 Ontario businesses for free 60-day management. No retainer. Real campaign management, real results.</p>
+    <a href="free.html" class="btn-white">Learn About the Free Offer →</a>
+  </div>
+
+  <!-- HEADING -->
+  <h2>Paid Management Plans</h2>
+  <p class="section-sub">For after the free period, or if you want guaranteed availability from day one.</p>
+
+  <!-- PRICING GRID -->
+  <div class="pricing-grid">
+    <div class="plan">
+      <div class="plan-name">Audit</div>
+      <div class="plan-price">$500 <span class="per">one-time</span></div>
+      <p class="plan-desc">Deep account audit + strategy document. Best for businesses who want to manage their own ads better.</p>
+      <ul class="plan-features">
+        <li>Full Google Ads account review</li>
+        <li>Wasted spend analysis</li>
+        <li>Keyword + targeting recommendations</li>
+        <li>Prioritized action plan</li>
+        <li>One strategy call (60 min)</li>
+      </ul>
+      <a href="free.html#apply" class="plan-btn secondary">Get Started →</a>
+    </div>
+
+    <div class="plan featured">
+      <div class="plan-badge">Most Popular</div>
+      <div class="plan-name">Managed</div>
+      <div class="plan-price">$1,500 <span class="per">/mo</span></div>
+      <p class="plan-desc">Full ongoing management. Best for businesses spending $1,500–$10K/month on ads.</p>
+      <ul class="plan-features">
+        <li>Everything in Audit</li>
+        <li>Full campaign management</li>
+        <li>Weekly optimization + A/B testing</li>
+        <li>Negative keyword management</li>
+        <li>Ad copy writing + testing</li>
+        <li>Weekly performance reports</li>
+        <li>Monthly strategy call</li>
+      </ul>
+      <a href="free.html#apply" class="plan-btn primary">Apply for Free Trial First →</a>
+    </div>
+
+    <div class="plan">
+      <div class="plan-name">Scale</div>
+      <div class="plan-price">$2,500 <span class="per">/mo</span></div>
+      <p class="plan-desc">High-budget management with advanced strategy. For businesses spending $10K+/month.</p>
+      <ul class="plan-features">
+        <li>Everything in Managed</li>
+        <li>Performance Max campaigns</li>
+        <li>Shopping + Display (if applicable)</li>
+        <li>Conversion rate optimization</li>
+        <li>Competitor analysis reports</li>
+        <li>Bi-weekly strategy calls</li>
+        <li>Priority availability</li>
+      </ul>
+      <a href="free.html#apply" class="plan-btn secondary">Get Started →</a>
+    </div>
+  </div>
+
+  <!-- COMPARISON TABLE -->
+  <h2 style="margin-bottom:24px">What's included</h2>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Audit ($500)</th>
+        <th>Managed ($1,500/mo)</th>
+        <th>Scale ($2,500/mo)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Account audit + action plan</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Keyword strategy</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Ongoing campaign management</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Ad copy writing + testing</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Negative keyword management</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Weekly reporting</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Performance Max / Shopping</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+      <tr><td>CRO consulting</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+      <tr><td>Contract length</td><td>One-time</td><td>Month-to-month</td><td>Month-to-month</td></tr>
+    </tbody>
+  </table>
+
+  <!-- FAQ -->
+  <h2 style="margin-top:64px;margin-bottom:8px">Common questions</h2>
+  <p class="section-sub">Straight answers, no sales copy.</p>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Why not charge a % of ad spend like other agencies?</div>
+      <div class="faq-a">Because it creates the wrong incentive. Percentage-of-spend agencies make more money when you spend more. I'm paid a flat fee, so my incentive is to get you the best results with the budget you have — not to increase your spend.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What happens after the free 60 days?</div>
+      <div class="faq-a">We review results together. If the campaigns are working and you want ongoing management, we discuss a paid arrangement (typically the Managed plan). There's no pressure — if you want to take over the account yourself, I'll hand it off clean and documented.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How is this different from hiring an agency?</div>
+      <div class="faq-a">You're working directly with me, not an account manager who manages 30+ clients. I have 3 years of Google Ads experience at a publicly-traded Canadian company. Smaller client roster = more attention per account.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What's the minimum ad budget I need?</div>
+      <div class="faq-a">For the free trial, any budget works — I've seen great results at $500/month. For paid management, I recommend at least $1,000/month in ad spend so the results can justify the management fee.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you work with businesses outside Ontario?</div>
+      <div class="faq-a">Not right now. I'm focused on building an Ontario-specific portfolio of results. Once those are established, I'll expand. If you're outside Ontario, sign up for the newsletter — I'll announce it there first.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Start with the <span>free offer</span></h2>
+  <p>No reason to pay before you've seen results. Try the free 60-day management first — then decide.</p>
+  <a href="free.html" class="btn-gold">Apply for the Free Offer →</a>
+</div>
+
+<footer>
+  <p><a href="index.html">Elvin Peters</a> · Google Ads Management · Toronto, Ontario<br>
+  <a href="free.html">Free 60-Day Offer</a> · <a href="google-ads-ontario.html">All Ontario Cities</a> · <a href="https://goodadagency.gumroad.com/l/pvofzn">The Book</a></p>
+</footer>
+
+</body>
+</html>
