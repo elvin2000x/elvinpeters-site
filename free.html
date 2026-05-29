@@ -481,10 +481,101 @@
 </div>
 </section>
 
+<!-- QUICK APPLY FORM -->
+<section style="background:#0d0d1f;padding:72px 24px" id="apply">
+  <div class="container" style="max-width:580px">
+    <p class="section-label" style="color:#c9a84c;margin-bottom:8px">Quick Apply</p>
+    <h2 style="color:#fff;font-size:30px;margin-bottom:8px">Apply for a free spot</h2>
+    <p style="color:#888;margin-bottom:32px">Takes 90 seconds. I'll reach out within 24 hours to book your intro call.</p>
+
+    <form id="leadForm" style="display:grid;gap:14px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div>
+          <label style="font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:6px">Your Name *</label>
+          <input type="text" name="name" required placeholder="Jane Smith"
+            style="width:100%;background:#1a1a2e;border:1px solid #333;color:#fff;padding:12px 14px;border-radius:6px;font-size:15px">
+        </div>
+        <div>
+          <label style="font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:6px">Business City *</label>
+          <input type="text" name="city" required placeholder="Toronto"
+            style="width:100%;background:#1a1a2e;border:1px solid #333;color:#fff;padding:12px 14px;border-radius:6px;font-size:15px">
+        </div>
+      </div>
+      <div>
+        <label style="font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:6px">Email Address *</label>
+        <input type="email" name="email" required placeholder="jane@example.com"
+          style="width:100%;background:#1a1a2e;border:1px solid #333;color:#fff;padding:12px 14px;border-radius:6px;font-size:15px">
+      </div>
+      <div>
+        <label style="font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:6px">Phone Number</label>
+        <input type="tel" name="phone" placeholder="416-555-0100"
+          style="width:100%;background:#1a1a2e;border:1px solid #333;color:#fff;padding:12px 14px;border-radius:6px;font-size:15px">
+      </div>
+      <div>
+        <label style="font-size:11px;color:#888;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:6px">Current Monthly Ad Budget</label>
+        <select name="budget"
+          style="width:100%;background:#1a1a2e;border:1px solid #333;color:#fff;padding:12px 14px;border-radius:6px;font-size:15px">
+          <option value="">Select...</option>
+          <option value="under_500">Under $500/mo</option>
+          <option value="500_1500">$500–$1,500/mo</option>
+          <option value="1500_5000">$1,500–$5,000/mo</option>
+          <option value="over_5000">$5,000+/mo</option>
+          <option value="not_running">Not running ads yet</option>
+        </select>
+      </div>
+      <button type="submit" id="submitBtn"
+        style="background:#c9a84c;color:#0d0d1f;font-weight:800;font-size:16px;padding:16px;border:none;border-radius:6px;cursor:pointer;width:100%">
+        Apply for Free Management →
+      </button>
+      <p id="formMsg" style="text-align:center;font-size:14px;display:none"></p>
+    </form>
+
+    <p style="color:#555;font-size:12px;text-align:center;margin-top:16px">Ontario businesses only · 5 spots available · No retainer required</p>
+  </div>
+</section>
+
+<script>
+document.getElementById('leadForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  const data = Object.fromEntries(new FormData(e.target).entries());
+  data.source = window.location.href;
+  try {
+    const res = await fetch('http://37.27.41.185/api/lead', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+    const json = await res.json();
+    if (json.success) {
+      e.target.style.display = 'none';
+      msg.style.display = 'block';
+      msg.style.color = '#4caf6e';
+      msg.textContent = '✓ ' + json.message;
+    } else {
+      btn.textContent = 'Apply for Free Management →';
+      btn.disabled = false;
+      msg.style.display = 'block';
+      msg.style.color = '#e05050';
+      msg.textContent = 'Something went wrong. Email elvin@epeters.ca directly.';
+    }
+  } catch {
+    btn.textContent = 'Apply for Free Management →';
+    btn.disabled = false;
+    msg.style.display = 'block';
+    msg.style.color = '#e05050';
+    msg.textContent = 'Could not submit. Email elvin@epeters.ca directly.';
+  }
+});
+</script>
+
 <!-- CTA -->
 <section class="cta-section" id="book">
-  <h2>5 Spots Available. First Come, First Served.</h2>
-  <p>Book a 15-minute call. I'll ask a few questions, you'll ask a few questions, and we'll both know within 15 minutes if this is a fit.</p>
+  <h2>Prefer to book a call instead?</h2>
+  <p>15 minutes. I'll ask a few questions, you'll ask a few questions, and we'll both know if this is a fit.</p>
   <a href="https://calendly.com/elvinpeters" class="cta-big">Book Your Free 15-Min Call →</a>
   <div><span class="spots-left">ONLY 5 SPOTS — ONTARIO BUSINESSES ONLY</span></div>
   <p style="margin-top:24px;font-size:13px;color:#555">No pitch. No retainer discussion. Just an honest conversation about your campaigns.</p>
