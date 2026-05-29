@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elvinpeters.com/sitemap.xml
