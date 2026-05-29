@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free 60-Day Google Ads Management — Elvin Peters</title>
+<meta name="description" content="Elvin Peters is offering free 60-day Google Ads management to 5 Ontario businesses. No retainer. No catch. Results first.">
+<meta property="og:title" content="Free Google Ads Management for 60 Days — Limited Spots">
+<meta property="og:description" content="An Ontario Google Ads strategist is offering free 60-day management to a small number of businesses. You keep every lead. He gets a case study.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d0d1f;
+    --gold: #c9a84c;
+    --white: #ffffff;
+    --off: #f4f2ee;
+    --text: #1a1a1a;
+    --muted: #666;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand { color: var(--gold); font-weight: 700; font-size: 15px; text-decoration: none; letter-spacing: 0.5px; }
+  .nav-link  { color: #aaa; font-size: 13px; text-decoration: none; }
+  .nav-link:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 80px 24px 72px;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub {
+    font-size: 18px;
+    color: #bbb;
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    transition: opacity 0.15s;
+  }
+  .hero-cta:hover { opacity: 0.88; }
+  .hero-fine {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background: #f9f7f4;
+    border-top: 3px solid var(--gold);
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .trust-item strong { display: block; font-size: 22px; color: var(--navy); margin-bottom: 2px; }
+
+  /* SECTIONS */
+  section { padding: 72px 24px; }
+  .container { max-width: 760px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+  p { color: #444; margin-bottom: 16px; font-size: 16px; }
+
+  /* WHAT YOU GET */
+  .get-list {
+    list-style: none;
+    margin: 32px 0;
+  }
+  .get-list li {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    align-items: flex-start;
+  }
+  .get-list li:last-child { border-bottom: none; }
+  .get-num {
+    width: 36px;
+    height: 36px;
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .get-text strong { display: block; font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .get-text span { font-size: 14px; color: var(--muted); }
+
+  /* FOR WHO */
+  .for-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .for-card {
+    background: #f9f7f4;
+    border-left: 3px solid var(--gold);
+    padding: 16px 20px;
+  }
+  .for-card strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+  .for-card span { font-size: 13px; color: var(--muted); }
+
+  .not-for {
+    background: #fff8f8;
+    border: 1px solid #f0d0d0;
+    border-radius: 4px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #888;
+    margin-top: 24px;
+  }
+  .not-for strong { color: #c0392b; }
+
+  /* WHY FREE */
+  .why-box {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    position: relative;
+  }
+  .why-box h3 { font-size: 20px; color: var(--gold); margin-bottom: 16px; }
+  .why-box p { color: #ccc; font-size: 15px; line-height: 1.7; }
+  .why-box p:last-child { margin-bottom: 0; }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-stats { list-style: none; }
+  .about-stats li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .about-stats li:last-child { border-bottom: none; }
+  .about-stats strong { display: block; font-size: 16px; color: var(--navy); }
+
+  /* PROCESS */
+  .steps { margin: 32px 0; }
+  .step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 40px; height: 40px;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+  .step-body strong { display: block; font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .step-body span { font-size: 14px; color: var(--muted); }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .cta-section h2 { color: #fff; margin-bottom: 16px; }
+  .cta-section p { color: #bbb; max-width: 520px; margin: 0 auto 36px; }
+  .cta-big {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 18px 48px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.15s;
+  }
+  .cta-big:hover { opacity: 0.88; }
+  .spots-left {
+    display: inline-block;
+    margin-top: 20px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0a0a18;
+    color: #555;
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+  footer a { color: #888; text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  @media (max-width: 600px) {
+    .trust-bar { gap: 24px; }
+    .why-box { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">ELVIN PETERS</a>
+  <a class="nav-link" href="#book">Book Your Call</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Limited Availability — Ontario Only</div>
+  <h1>Free Google Ads Management<br><span>for 60 Days.</span></h1>
+  <p class="hero-sub">I run your campaigns. You keep every lead. I get an anonymized case study.<br>No retainer. No contract. No catch.</p>
+  <a href="#book" class="hero-cta">Check If You Qualify →</a>
+  <p class="hero-fine">15-minute call. I'll tell you honestly if I can help.</p>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><strong>60</strong>Days free</div>
+  <div class="trust-item"><strong>$0</strong>Retainer</div>
+  <div class="trust-item"><strong>5</strong>Spots available</div>
+  <div class="trust-item"><strong>48h</strong>To first results</div>
+</div>
+
+<!-- WHAT YOU GET -->
+<section style="background:#fff">
+<div class="container">
+  <p class="section-label">What's included</p>
+  <h2>Everything you'd pay $1,500/month for — at no cost.</h2>
+  <p>For 60 days, I treat your account like one of my highest-paying clients. Here's what that means:</p>
+  <ul class="get-list">
+    <li>
+      <div class="get-num">1</div>
+      <div class="get-text">
+        <strong>Full account audit (first 48 hours)</strong>
+        <span>I go through every campaign, ad group, keyword, and bid. I show you what's burning budget, what's converting, and exactly why. Written deliverable.</span>
+      </div>
+    </li>
+    <li>
+      <div class="get-num">2</div>
+      <div class="get-text">
+        <strong>Campaign restructure</strong>
+        <span>If your account needs rebuilding — I rebuild it. New structure, new ad copy, new audiences. Done in week one.</span>
+      </div>
+    </li>
+    <li>
+      <div class="get-num">3</div>
+      <div class="get-text">
+        <strong>60 days of active management</strong>
+        <span>Bid adjustments, A/B tests, negative keyword pruning, Quality Score improvements. Daily attention, not once-a-week check-ins.</span>
+      </div>
+    </li>
+    <li>
+      <div class="get-num">4</div>
+      <div class="get-text">
+        <strong>Weekly performance reports</strong>
+        <span>Plain-English email every Monday: spend, leads, cost per lead, what I changed and why. No dashboards to learn.</span>
+      </div>
+    </li>
+    <li>
+      <div class="get-num">5</div>
+      <div class="get-text">
+        <strong>You own everything</strong>
+        <span>Your account stays in your name. Every change I make is documented. After 60 days, you have a fully optimized account whether we continue or not.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+</section>
+
+<!-- FOR WHO -->
+<section style="background:var(--off)">
+<div class="container">
+  <p class="section-label">Who this is for</p>
+  <h2>This isn't for everyone. Here's who qualifies.</h2>
+  <p>I'm selective because I only take businesses where I know I can improve results. To qualify, you need:</p>
+  <div class="for-grid">
+    <div class="for-card">
+      <strong>Ontario business</strong>
+      <span>Based in Ontario, Canada</span>
+    </div>
+    <div class="for-card">
+      <strong>Active Google Ads</strong>
+      <span>Already running campaigns (or starting within 30 days)</span>
+    </div>
+    <div class="for-card">
+      <strong>$2,000+/month budget</strong>
+      <span>Minimum monthly ad spend</span>
+    </div>
+    <div class="for-card">
+      <strong>Decision maker</strong>
+      <span>Business owner or marketing lead</span>
+    </div>
+    <div class="for-card">
+      <strong>Home services, trades, or local B2C</strong>
+      <span>My strongest results are here: HVAC, plumbing, solar, roofing, movers, landscaping, auto</span>
+    </div>
+    <div class="for-card">
+      <strong>Open to sharing results</strong>
+      <span>I use your anonymized numbers as a case study (no name, no business details)</span>
+    </div>
+  </div>
+  <div class="not-for">
+    <strong>This is not for you if:</strong> you spend under $1,500/month, you're in e-commerce or SaaS, or you need a yes-man who won't challenge your current campaigns. I'll tell you if something isn't working.
+  </div>
+</div>
+</section>
+
+<!-- WHY FREE -->
+<section style="background:#fff">
+<div class="container">
+  <p class="section-label">The honest explanation</p>
+  <h2>Why would you do this for free?</h2>
+  <div class="why-box">
+    <h3>Here's the real answer.</h3>
+    <p>I've spent years running Google Ads at scale for major Canadian companies. Now I'm building my own consulting practice from scratch — and I want to do it the right way: results first, then reputation, then revenue.</p>
+    <p>The conventional path is to pitch case studies from a previous employer. I'd rather build real ones under my own name. So I'm taking on 5 Ontario businesses right now at no cost. I run your campaigns for 60 days, I document every improvement (with your permission), and I use that as proof for future clients.</p>
+    <p>You get the upside of a senior-level Google Ads strategist without the monthly retainer. I get a data-backed case study. After 60 days, you decide if you want to keep working together — and by then, the results will make that decision obvious.</p>
+  </div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="background:var(--off)">
+<div class="container">
+  <p class="section-label">The process</p>
+  <h2>What happens after you book.</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>15-minute qualification call</strong>
+        <span>I ask about your business, your current campaigns, and your goals. I'll tell you honestly if this is a fit — no fluff.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Google Ads access (Manager level)</strong>
+        <span>You add my account as a manager. Takes 2 minutes. You can remove it any time.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Audit delivered within 48 hours</strong>
+        <span>I review everything and send you a written breakdown before touching a single setting.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <strong>60 days of active management</strong>
+        <span>Weekly reports. Real optimization. No ghosting.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <strong>Decision at day 60</strong>
+        <span>You've seen real results. If you want to continue, we talk about paid management. If not, you walk away with a fully optimized account. Either way, you win.</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section style="background:#fff">
+<div class="container">
+  <p class="section-label">About Elvin</p>
+  <h2>Who you'd be working with.</h2>
+  <div class="about-grid">
+    <ul class="about-stats">
+      <li><strong>Toronto, Ontario</strong>Google Ads Strategist</li>
+      <li><strong>Millions in ad spend</strong>Managed across Canadian brands</li>
+      <li><strong>Author</strong>The Artificial Advantage</li>
+      <li><strong>AI-first operator</strong>Uses AI to deliver faster, better results</li>
+    </ul>
+    <div>
+      <p>I've been running paid search for years across multiple industries. I know what good Google Ads management looks like — and I know how many Ontario businesses are getting mediocre results while overpaying for it.</p>
+      <p>The difference between a well-run and a poorly-run Google Ads account is usually 30-50% of wasted budget — money that could be going to more leads or more profit. That's what I find and fix.</p>
+      <p>I'm also building AI systems that make this kind of work faster, more consistent, and more data-driven than a traditional agency. You're not just getting a human strategist — you're getting a strategist with better tools.</p>
+      <a href="/" style="color:var(--gold);font-size:14px;text-decoration:none">More about Elvin →</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="book">
+  <h2>5 Spots Available. First Come, First Served.</h2>
+  <p>Book a 15-minute call. I'll ask a few questions, you'll ask a few questions, and we'll both know within 15 minutes if this is a fit.</p>
+  <a href="https://calendly.com/elvinpeters" class="cta-big">Book Your Free 15-Min Call →</a>
+  <div><span class="spots-left">ONLY 5 SPOTS — ONTARIO BUSINESSES ONLY</span></div>
+  <p style="margin-top:24px;font-size:13px;color:#555">No pitch. No retainer discussion. Just an honest conversation about your campaigns.</p>
+</section>
+
+<footer>
+  <p>
+    <a href="/">Elvin Peters</a> · Google Ads Strategist · Toronto, Ontario ·
+    <a href="mailto:elvin@epeters.ca">elvin@epeters.ca</a>
+  </p>
+  <p style="margin-top:8px">
+    <a href="/privacy.html">Privacy</a> · <a href="/tos.html">Terms</a>
+  </p>
+</footer>
+
+</body>
+</html>
