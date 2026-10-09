@@ -547,7 +547,7 @@ document.getElementById('leadForm').addEventListener('submit', async function(e)
   const data = Object.fromEntries(new FormData(e.target).entries());
   data.source = window.location.href;
   try {
-    const res = await fetch('http://37.27.41.185/api/lead', {
+    const res = await fetch('https://ultimateaidirectory.com/api/lead', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)

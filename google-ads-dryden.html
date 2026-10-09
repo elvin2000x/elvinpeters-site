@@ -283,7 +283,7 @@ async function submitLead_dryden(e) {
   data.city = data.city_field || 'Dryden'; delete data.city_field;
   data.source = window.location.href;
   try {
-    const r = await fetch('http://37.27.41.185/api/lead', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    const r = await fetch('https://ultimateaidirectory.com/api/lead', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
     const j = await r.json();
     if (j.success) {
       e.target.style.display='none'; msg.style.display='block';
